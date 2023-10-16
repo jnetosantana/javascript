@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade:</h1>
+    País em que nasceu: <input type="text" name="txtpa" id="txtpa">
+    <input type="button" value="Enviar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+        var txtpa = window.document.getElementById('txtpa')
+        var res = window.document.getElementById('res')
+        if (txtpa.value.toLowerCase() === 'brasil') {
+            res.innerHTML = `<p>Sua nacionalidade é Brasileira.</p>`
+        }else {
+            res.innerHTML =  `<p>Você é estrangeiro.</p>`
+        }
+    }
+    </script>
+</body>
+</html>
